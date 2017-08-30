@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_x2">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/space_x14"
+        android:layout_height="@dimen/space_x5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_x2"
+        android:src="@drawable/ic_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_copyright"
+        android:layout_below="@+id/img_logo"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/space_x16"
+            android:layout_height="@dimen/space_x12"
+            android:layout_marginBottom="@dimen/space_x1"
+            android:src="@drawable/ic_failed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x4"
+            android:text="@string/desc_network"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/body_text_size" />
+
+        <Button
+            android:id="@+id/btn_verify_again"
+            style="@style/ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x2"
+            android:paddingLeft="@dimen/space_x6"
+            android:paddingRight="@dimen/space_x6"
+            android:text="@string/action_verify_again" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/ButtonBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_half"
+            android:paddingLeft="@dimen/space_x6"
+            android:paddingRight="@dimen/space_x6"
+            android:text="@string/action_back_to_home" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_copyright"
+        style="@style/TextAppearanceRegularDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/space_x2"
+        android:text="@string/msg_copyright" />
+</RelativeLayout>

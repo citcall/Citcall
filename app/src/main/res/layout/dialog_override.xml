@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="@dimen/space_x2">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/space_x14"
+        android:layout_height="@dimen/space_x5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_x2"
+        android:layout_marginTop="@dimen/space_x2"
+        android:src="@drawable/ic_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearanceRegularBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x2"
+            android:text="@string/msg_wait" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x2" />
+
+        <TextView
+            android:id="@+id/txt_try"
+            style="@style/TextAppearanceRegularBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x1"
+            android:text="1 of 3 try" />
+
+        <TextView
+            android:id="@+id/txt_network_error"
+            style="@style/TextAppearanceRegularBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x2"
+            android:text="@string/msg_please_check_network"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearanceRegularDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/space_x2"
+        android:text="@string/msg_copyright" />
+</RelativeLayout>

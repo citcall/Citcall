@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Citcall</string>
+
+    <string name="msg_copyright" formatted="false">\@copyright citcall.com</string>
+    <string name="msg_wait">Wait to Verify Your Number</string>
+    <string name="msg_success">SUCCESS</string>
+    <string name="msg_please_check_network">Please check your network connection</string>
+    <string name="desc_network">Please make sure your network is on</string>
+    <string name="msg_android_automated_apps">Android automated apps</string>
+    <string name="desc_benefit">Benefit :\n- Increase validity of user or transaction\n- Super user friendly with automation\n- Highly efficient than sms or other way</string>
+    <string name="desc_ios">for iOS application check out\nwww.citcall.com/demo</string>
+    <string name="msg_contact">Joel Kereh\ninfo@citcall.com\n08194010777</string>
+
+    <!-- action -->
+    <string name="action_verify">Verify</string>
+    <string name="action_verify_again">Verify Again</string>
+    <string name="action_more_info">More Info</string>
+    <string name="action_back_to_home">Back to home</string>
+    <string name="action_contact_us">Contact Us</string>
+
+    <!-- hint -->
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_company_name">Company Name</string>
+
+    <!-- error -->
+    <string name="error_no_internet_connection">No internet connection</string>
+    <string name="error_slow_internet_connection">Slow internet connection</string>
+    <string name="error_internal_server_error">Internal server error</string>
+</resources>
