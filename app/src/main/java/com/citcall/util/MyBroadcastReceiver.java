@@ -67,22 +67,28 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
                             case TelephonyManager.CALL_STATE_RINGING:
                                 Log.d("test", "ringing");
 
-                                if(incomingNumber.length() == 6){
+                                //to ensure that incoming calls are received
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                                //telkomsel case
+                                if(incomingNumber.startsWith("021")){
+                                    String filterString = incomingNumber.replace("+", "");
+                                    String belakang = filterString.substring(3);
+                                    String prefixNumber = "6221";
+                                    String finalNumber =  prefixNumber + belakang;
+                                    Hawk.put(Const.Key.NUMBER, finalNumber);
+                                    silentRinger(context);
+                                    Log.d("test", "disconnect now...");
+                                    disconnectPhoneItelephony(context);
+                                }else{
                                     String filterString = incomingNumber.replace("+", "");
                                     Hawk.put(Const.Key.NUMBER, filterString);
                                     silentRinger(context);
                                     Log.d("test", "disconnect now...");
                                     disconnectPhoneItelephony(context);
-                                }else{
-                                    if(incomingNumber.length() > 6){
-                                        if(incomingNumber.startsWith("+62890")){
-                                            String lastCharNumber = incomingNumber.substring(incomingNumber.length()-5, incomingNumber.length());
-                                            Hawk.put(Const.Key.NUMBER, lastCharNumber);
-                                            silentRinger(context);
-                                            Log.d("test", "disconnect now...");
-                                            disconnectPhoneItelephony(context);
-                                        }
-                                    }
                                 }
                                 break;
                         }
